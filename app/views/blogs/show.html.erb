@@ -10,5 +10,10 @@
   <%= @blog.description %>
 </p>
 
+<p>
+  <%=  @blog.created_at.strftime("%F %I:%M%p") %> |
+  <%=  @blog.updated_at.strftime("%F %I:%M%p") %>
+</p>
+
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
